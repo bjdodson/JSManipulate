@@ -17,7 +17,7 @@ Musubi.ready(function(appContext) {
   globalAppContext = appContext;
 
   canvas = document.getElementById("image");
-  var args = {id:"image" };
+  var args = {id:"image", size: 5 };
   if (appContext.obj != null) {
     var img = Musubi.urlForRawData(appContext.obj.objId);
     if (img != null) {
@@ -101,9 +101,16 @@ function onImageLoaded(img) {
 
            
 var SketchApp = function(options) {
-  // grab canvas element
-  var drawing = false;
-  $("#image").attr("src", options.bg);
+    // grab canvas element
+    var drawing = false;
+	$("#image").attr("onload", 'onImageLoaded(this)');
+    $("#image").attr("src", options.bg);
+    var self = {
+		//bind click events
+		init: function() {
+			return this;
+		},
+	};
   return self.init();
 };
 
