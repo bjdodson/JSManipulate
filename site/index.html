@@ -36,6 +36,41 @@
 		<div id="image-container">
 			<img src="assets/flower.jpg" alt="flower" id="image"/>
 		</div>
+		<div style="display:none" id="plugin-input">
+			<h2>Plugin Specific Settings</h2>
+			<a id="examples-link" href="examples" class="orange">Examples</a>
+			<a href="http://codecanyon.net/item/jsmanipulate-jquery-image-manipulation-plugin/428234?ref=JoelBesada" class="orange">Read More</a>
+			<div id="plugin-selects" class="column">
+				<select name="direction" title="Direction" id="direction-select">
+					<option value="none">None</option>
+					<option value="up">Up</option>
+					<option value="down">Down</option>
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</select>
+				<select name="easing" title="Easing" id="easing-select">
+					<option value="none">None (Linear)</option>
+					<option value="in">Ease In</option>
+					<option value="out">Ease Out</option>
+					<option value="inout">Ease In &amp; Out</option>
+				</select>
+			</div>
+			<div id="plugin-sliders" class="column">
+				<h3>Time</h3>
+				<div id="time-slider" class="slider"></div>
+				<input id="time-input" type="text" name="time" class="text-input" />
+				<h3>Steps</h3>
+				<div id="steps-slider" class="slider"></div>
+				<input id="steps-input" type="text" name="steps" class="text-input" />
+			</div>
+			<div id="plugin-button" class="column">
+				<div id="smooth-wrapper">
+					<input type="checkbox" name="smooth" id="smooth-check" checked="checked"/>
+					<label for="smooth-check">Smooth</label>
+				</div>
+				<div id="animate-button"><button>Animate</button></div>
+			</div>
+		</div>
 		<div id="get-container">
 			<p>Access the open-source filter library <a href="https://github.com/JoelBesada/JSManipulate" class="dark-orange bold">HERE</a></p>
 		</div>
