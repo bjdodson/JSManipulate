@@ -1,0 +1,24 @@
+@media screen {
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Maven Pro Black'), local('MavenProBlack'), url('http://themes.googleusercontent.com/static/fonts/mavenpro/v4/-91TwiFzqeL1F7Kh91APwXhCUOGz7vYGh680lGh-uXM.woff') format('woff');
+}
+}
+@media screen {
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Maven Pro Bold'), local('MavenProBold'), url('http://themes.googleusercontent.com/static/fonts/mavenpro/v4/uDssvmXgp7Nj3i336k_dSnhCUOGz7vYGh680lGh-uXM.woff') format('woff');
+}
+}
+@media screen {
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Maven Pro Medium'), local('MavenProMedium'), url('http://themes.googleusercontent.com/static/fonts/mavenpro/v4/SQVfzoJBbj9t3aVcmbspRnhCUOGz7vYGh680lGh-uXM.woff') format('woff');
+}
+}
