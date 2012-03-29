@@ -17,7 +17,7 @@ Musubi.ready(function(appContext) {
   globalAppContext = appContext;
 
   canvas = document.getElementById("image");
-  var args = {id:"image", size: 5, color: $("#color").css("background-color") };
+  var args = {id:"image" };
   if (appContext.obj != null) {
     var img = Musubi.urlForRawData(appContext.obj.objId);
     if (img != null) {
@@ -59,10 +59,6 @@ Musubi.ready(function(appContext) {
     orientationUpdate();
   }, false);
 
-
-  $("#color").click(function(e) {
-    showColorPicker();
-  });
 
 
   globalAppContext.setBack(function() {
