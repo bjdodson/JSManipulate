@@ -8,7 +8,7 @@ var mx = 0; // TODO: someone with "javascript skills" should make this object or
 var my = 0;
 var Mx = 0;
 var My = 0;
-var canvas = null;
+var image = null;
 
 var globalAppContext;
 
@@ -16,7 +16,7 @@ Musubi.ready(function(appContext) {
 
   globalAppContext = appContext;
 
-  canvas = document.getElementById("image");
+  image = document.getElementById("image");
   var args = {id:"image", size: 5 };
   if (appContext.obj != null) {
     var img = Musubi.urlForRawData(appContext.obj.objId);
@@ -76,18 +76,18 @@ function orientationUpdate() {
 
 function onImageLoaded(img) {
   console.log("onImageLoaded(" + img);
-  var canvas = document.getElementById("image"),
-  ctxt = canvas.getContext("2d");
+  var image = document.getElementById("image"),
+  ctxt = image.getContext("2d");
 
   var aspect = img.width / img.height;
-  var scaleWidth = canvas.width;
+  var scaleWidth = image.width;
   var scaleHeight = scaleWidth / aspect;
-  if (scaleHeight > canvas.height) {
+  if (scaleHeight > image.height) {
     console.log("rescaling from height " + scaleHeight);
-    scaleHeight = canvas.height;
+    scaleHeight = image.height;
     scaleWidth = scaleHeight * aspect;
   }
-  var sy = (canvas.height - scaleHeight) / 2;
+  var sy = (image.height - scaleHeight) / 2;
   var sx = 0;
 
   mx = sx;
@@ -101,7 +101,7 @@ function onImageLoaded(img) {
 
            
 var SketchApp = function(options) {
-    // grab canvas element
+    // grab image element
     var drawing = false;
 	$("#image").attr("onload", 'onImageLoaded(this)');
     $("#image").attr("src", options.bg);
