@@ -74,36 +74,8 @@ function orientationUpdate() {
 
 }
 
-function onImageLoaded(img) {
-  console.log("onImageLoaded(" + img);
-  var image = document.getElementById("image"),
-  ctxt = image.getContext("2d");
-
-  var aspect = img.width / img.height;
-  var scaleWidth = image.width;
-  var scaleHeight = scaleWidth / aspect;
-  if (scaleHeight > image.height) {
-    console.log("rescaling from height " + scaleHeight);
-    scaleHeight = image.height;
-    scaleWidth = scaleHeight * aspect;
-  }
-  var sy = (image.height - scaleHeight) / 2;
-  var sx = 0;
-
-  mx = sx;
-  my = sy;
-  Mx = scaleWidth + mx; 
-  My = scaleHeight + my;
-
-  ctxt.drawImage(img, sx, sy, scaleWidth, scaleHeight);  
-  console.log("drawing img " + scaleWidth + "x" + scaleHeight);
-}
-
            
 var SketchApp = function(options) {
-    // grab image element
-    var drawing = false;
-	$("#image").attr("onload", 'onImageLoaded(this)');
     $("#image").attr("src", options.bg);
     var self = {
 		//bind click events
