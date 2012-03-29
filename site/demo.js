@@ -27,8 +27,6 @@ function init(){
 			$("#steps-input").attr({value: $(this).slider("option","value") });	
 		}
 	});
-	$("#time-input").attr({value: defaultTime}).change(function(){timeSlider.slider({value:$(this).attr("value")});});
-	$("#steps-input").attr({value: defaultSteps}).change(function(){stepsSlider.slider({value:$(this).attr("value")});});
 	$("#image").jsManipulate("convert", function(can){ canvas=can;});
 	fillFilterList();  
 	$("#filter-select")[0].value = "twirl";
@@ -37,6 +35,5 @@ function init(){
 	$("#direction-select").selectmenu("disable");
 	$("#easing-select").selectmenu({change: function(){ easeSelected = true; }});
 	$("#apply-button").click(function(){ applyFilter("apply");});
-	$("#animate-button").click(function(){ applyFilter("animate");});
 
 }
