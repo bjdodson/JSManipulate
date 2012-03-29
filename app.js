@@ -76,7 +76,7 @@ function orientationUpdate() {
 
 function onImageLoaded(img) {
   console.log("onImageLoaded(" + img);
-  var canvas = document.getElementById("sketchpad"),
+  var canvas = document.getElementById("image"),
   ctxt = canvas.getContext("2d");
 
   var aspect = img.width / img.height;
